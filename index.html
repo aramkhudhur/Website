@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Lumora Skin Advanced Hydrating & Anti-Aging Serum. Clinical-grade hydration, visible glow, and smoother skin in weeks." />
+  <title>Lumora Skin | Advanced Hydrating & Anti-Aging Serum</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f7f4ef;
+      --bg-soft: #fcfaf7;
+      --text: #1d1b19;
+      --muted: #6f6a63;
+      --primary: #131313;
+      --accent: #d8a46b;
+      --accent-strong: #be8040;
+      --card: rgba(255, 255, 255, 0.7);
+      --shadow: 0 20px 40px rgba(31, 26, 20, 0.08);
+      --radius-lg: 24px;
+      --radius-md: 16px;
+      --transition: 0.28s ease;
+      --max-width: 1150px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 100% 0%, rgba(216, 164, 107, 0.13), transparent 45%),
+        radial-gradient(circle at 0% 30%, rgba(216, 164, 107, 0.1), transparent 35%),
+        var(--bg);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+      border-radius: var(--radius-md);
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(var(--max-width), calc(100% - 2rem));
+      margin-inline: auto;
+    }
+
+    .section {
+      padding: 4.8rem 0;
+    }
+
+    h1, h2, h3 {
+      margin: 0 0 0.9rem;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+    }
+
+    h1, h2 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-weight: 700;
+    }
+
+    h1 { font-size: clamp(2.1rem, 4.8vw, 4rem); }
+    h2 { font-size: clamp(1.8rem, 4vw, 3rem); }
+    h3 { font-size: 1.2rem; }
+
+    p { margin: 0 0 1rem; color: var(--muted); }
+
+    .eyebrow {
+      display: inline-flex;
+      gap: .45rem;
+      align-items: center;
+      border-radius: 999px;
+      padding: 0.42rem 0.85rem;
+      background: rgba(255, 255, 255, 0.75);
+      box-shadow: 0 6px 18px rgba(31, 26, 20, 0.08);
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: #534a42;
+      margin-bottom: 1.25rem;
+      backdrop-filter: blur(8px);
+    }
+
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      border: 0;
+      border-radius: 999px;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      cursor: pointer;
+      transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
+      padding: 0.95rem 1.65rem;
+      font-size: 1rem;
+      min-height: 48px;
+    }
+
+    .btn-primary {
+      color: #fff;
+      background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+      box-shadow: 0 14px 24px rgba(190, 128, 64, 0.35);
+    }
+
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 20px 28px rgba(190, 128, 64, 0.36); }
+
+    .btn-outline {
+      border: 1px solid rgba(29, 27, 25, 0.14);
+      background: rgba(255,255,255,0.7);
+      color: var(--text);
+    }
+
+    .btn-outline:hover { transform: translateY(-2px); }
+
+    .hero {
+      padding-top: 1.5rem;
+      min-height: 100vh;
+      display: grid;
+      align-content: center;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2.8rem;
+    }
+
+    .logo {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .hero-grid {
+      display: grid;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .hero-copy p { max-width: 56ch; }
+
+    .benefits {
+      display: grid;
+      gap: .7rem;
+      margin: 1.3rem 0 1.8rem;
+      padding: 0;
+      list-style: none;
+    }
+
+    .benefits li {
+      display: flex;
+      align-items: center;
+      gap: .65rem;
+      font-weight: 500;
+      color: #4f4a45;
+    }
+
+    .icon {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: rgba(216, 164, 107, 0.2);
+      display: grid;
+      place-items: center;
+      color: #85572f;
+      flex-shrink: 0;
+      font-size: .8rem;
+      font-weight: 700;
+    }
+
+    .hero-media {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-media::after {
+      content: "Editor's Pick 2026";
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+      background: rgba(19, 19, 19, 0.74);
+      color: #fff;
+      backdrop-filter: blur(8px);
+      border-radius: 999px;
+      padding: .4rem .72rem;
+      font-size: .73rem;
+      font-weight: 600;
+      letter-spacing: .03em;
+    }
+
+    .trust-row {
+      margin-top: 1.7rem;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: .8rem;
+    }
+
+    .trust-pill {
+      background: rgba(255,255,255,0.65);
+      border: 1px solid rgba(0,0,0,0.06);
+      border-radius: 999px;
+      padding: .55rem .8rem;
+      text-align: center;
+      font-size: .8rem;
+      font-weight: 600;
+      color: #4d4842;
+      backdrop-filter: blur(8px);
+    }
+
+    .glass-card {
+      background: var(--card);
+      border: 1px solid rgba(255,255,255,0.6);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(14px);
+    }
+
+    .problem-grid,
+    .offer-grid {
+      display: grid;
+      gap: 1.4rem;
+      align-items: center;
+    }
+
+    .problem-box {
+      padding: 1.6rem;
+    }
+
+    .pain-list {
+      margin: 1rem 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: .65rem;
+    }
+
+    .pain-list li {
+      padding: .7rem .85rem;
+      background: rgba(255,255,255,0.66);
+      border-radius: 12px;
+      border: 1px solid rgba(0,0,0,0.05);
+      color: #46403b;
+      font-weight: 500;
+    }
+
+    .before-after {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: .8rem;
+    }
+
+    .before-after figure {
+      margin: 0;
+      position: relative;
+    }
+
+    .before-after figcaption {
+      position: absolute;
+      bottom: .7rem;
+      left: .7rem;
+      background: rgba(19,19,19,.72);
+      color: #fff;
+      font-size: .72rem;
+      border-radius: 999px;
+      padding: .32rem .66rem;
+      letter-spacing: .03em;
+    }
+
+    .ingredients-grid,
+    .testimonials,
+    .how-grid {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .ingredient,
+    .testimonial,
+    .step {
+      padding: 1.25rem;
+      border-radius: var(--radius-md);
+      background: rgba(255,255,255,0.74);
+      border: 1px solid rgba(0,0,0,0.06);
+      box-shadow: 0 8px 20px rgba(21, 18, 14, 0.06);
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+
+    .ingredient:hover,
+    .testimonial:hover,
+    .step:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 26px rgba(21, 18, 14, 0.1);
+    }
+
+    .testimonial .stars { color: #cf9a63; letter-spacing: .05em; font-weight: 800; }
+
+    .rating-banner {
+      margin: 0 auto 1.4rem;
+      width: fit-content;
+      padding: .6rem 1rem;
+      border-radius: 999px;
+      font-weight: 700;
+      background: rgba(255,255,255,0.82);
+      border: 1px solid rgba(0,0,0,0.08);
+    }
+
+    .offer-card {
+      padding: 1.55rem;
+      position: relative;
+    }
+
+    .discount-badge {
+      display: inline-block;
+      background: #1a1a1a;
+      color: #fff;
+      border-radius: 999px;
+      padding: .38rem .7rem;
+      font-size: .74rem;
+      letter-spacing: .03em;
+      font-weight: 700;
+      margin-bottom: .8rem;
+    }
+
+    .price {
+      display: flex;
+      align-items: baseline;
+      gap: .6rem;
+      margin-bottom: .7rem;
+    }
+
+    .price strong { font-size: 2rem; line-height: 1; }
+    .price s { color: #878078; }
+
+    .scarcity {
+      color: #9d3d2f;
+      font-weight: 700;
+      margin-bottom: .9rem;
+    }
+
+    .guarantee {
+      margin-top: .7rem;
+      font-size: .86rem;
+      color: #555049;
+    }
+
+    .faq .item {
+      border-bottom: 1px solid rgba(0,0,0,0.12);
+      padding: .9rem 0;
+    }
+
+    .faq button {
+      width: 100%;
+      border: 0;
+      background: transparent;
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text);
+      cursor: pointer;
+      padding: .2rem 0;
+    }
+
+    .faq .content {
+      max-height: 0;
+      overflow: hidden;
+      color: var(--muted);
+      transition: max-height .32s ease;
+      margin-right: 1.5rem;
+    }
+
+    .faq .item.active .content { max-height: 160px; margin-top: .5rem; }
+
+    .final-cta {
+      text-align: center;
+      padding-bottom: 5rem;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity .65s ease, transform .65s ease;
+    }
+
+    .fade-in.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    footer {
+      border-top: 1px solid rgba(0,0,0,0.08);
+      color: #6f6a63;
+      font-size: .86rem;
+      text-align: center;
+      padding: 1.4rem 0 2rem;
+    }
+
+    @media (min-width: 820px) {
+      .hero-grid,
+      .problem-grid,
+      .offer-grid {
+        grid-template-columns: 1.05fr .95fr;
+      }
+
+      .ingredients-grid { grid-template-columns: repeat(3, 1fr); }
+      .testimonials { grid-template-columns: repeat(3, 1fr); }
+      .how-grid { grid-template-columns: repeat(3, 1fr); }
+
+      .hero {
+        padding-top: 2rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .trust-row { grid-template-columns: 1fr; }
+      .before-after { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero container">
+    <nav class="nav" aria-label="Main navigation">
+      <div class="logo">Lumora Skin</div>
+      <a href="#offer" class="btn btn-outline">Shop Now</a>
+    </nav>
+
+    <div class="hero-grid">
+      <div class="hero-copy fade-in">
+        <span class="eyebrow">Science-Backed Serum</span>
+        <h1>Wake up to visibly plumper, smoother, luminous skin.</h1>
+        <p>
+          Lumora Skin combines deep hydration and targeted anti-aging actives to reduce dullness and soften fine lines in as little as 14 days.
+        </p>
+        <ul class="benefits" aria-label="Primary benefits">
+          <li><span class="icon">✓</span>Instant moisture-lock glow without heaviness</li>
+          <li><span class="icon">✓</span>Clinically observed reduction in fine lines</li>
+          <li><span class="icon">✓</span>Barrier-strengthening formula for long-term clarity</li>
+        </ul>
+        <a href="#offer" class="btn btn-primary">Get Clear Skin Today</a>
+
+        <div class="trust-row" aria-label="Trust indicators">
+          <div class="trust-pill">Dermatologist Tested</div>
+          <div class="trust-pill">30-Day Guarantee</div>
+          <div class="trust-pill">Cruelty-Free</div>
+        </div>
+      </div>
+
+      <div class="hero-media fade-in">
+        <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=1000&q=80" alt="Lumora Skin serum bottle on minimalist background" loading="eager" />
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" id="solution">
+      <div class="container problem-grid">
+        <div class="problem-box glass-card fade-in">
+          <span class="eyebrow">Problem → Solution</span>
+          <h2>When your skin feels tired, your confidence follows.</h2>
+          <p>Dryness, dull tone, and early fine lines can make even great days feel off. Lumora Skin is designed to reset hydration, restore bounce, and reveal a smoother complexion.</p>
+          <ul class="pain-list">
+            <li>Persistent tightness and flaking by midday</li>
+            <li>Uneven texture that makeup can’t hide</li>
+            <li>First visible lines around eyes and smile zone</li>
+          </ul>
+        </div>
+
+        <div class="before-after fade-in" aria-label="Before and after comparison">
+          <figure>
+            <img src="https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?auto=format&fit=crop&w=900&q=80" alt="Before Lumora Skin usage" loading="lazy" />
+            <figcaption>Before</figcaption>
+          </figure>
+          <figure>
+            <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=900&q=80" alt="After Lumora Skin usage" loading="lazy" />
+            <figcaption>After 4 Weeks</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="ingredients">
+      <div class="container">
+        <div class="fade-in">
+          <span class="eyebrow">Clinical Formula</span>
+          <h2>Three premium ingredients. One transformative ritual.</h2>
+        </div>
+        <div class="ingredients-grid">
+          <article class="ingredient fade-in">
+            <div class="icon">HA</div>
+            <h3>Multi-Weight Hyaluronic Acid</h3>
+            <p>Attracts and retains moisture at multiple skin depths for a fuller, more supple look.</p>
+          </article>
+          <article class="ingredient fade-in">
+            <div class="icon">P5</div>
+            <h3>Bio-Peptide Complex</h3>
+            <p>Supports collagen function to visibly soften expression lines and improve elasticity over time.</p>
+          </article>
+          <article class="ingredient fade-in">
+            <div class="icon">N+</div>
+            <h3>Niacinamide + Ceramides</h3>
+            <p>Strengthens barrier integrity, minimizes redness appearance, and promotes clear, even tone.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="reviews">
+      <div class="container">
+        <div class="rating-banner fade-in">★ 4.9/5 from 12,000+ customers</div>
+        <div class="testimonials">
+          <article class="testimonial fade-in"><div class="stars">★★★★★</div><p>“By week two my skin looked rested and hydrated all day. This is now my non-negotiable.”</p><strong>Amelia, London</strong></article>
+          <article class="testimonial fade-in"><div class="stars">★★★★★</div><p>“I get compliments on my glow constantly. It feels expensive because it works.”</p><strong>Noor, Dubai</strong></article>
+          <article class="testimonial fade-in"><div class="stars">★★★★★</div><p>“Fine lines softened and makeup sits beautifully now. Worth every cent.”</p><strong>Sofia, Toronto</strong></article>
+          <article class="testimonial fade-in"><div class="stars">★★★★★</div><p>“My sensitive skin usually reacts, but Lumora is calm, gentle, and effective.”</p><strong>Chloe, Sydney</strong></article>
+          <article class="testimonial fade-in"><div class="stars">★★★★★</div><p>“Skin feels bouncy and smooth the next morning. It’s become my evening ritual.”</p><strong>Lina, Berlin</strong></article>
+          <article class="testimonial fade-in"><div class="stars">★★★★★</div><p>“The texture, finish, and results feel luxury-level. Loved the 30-day guarantee too.”</p><strong>Maya, New York</strong></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="how-it-works">
+      <div class="container">
+        <div class="fade-in">
+          <span class="eyebrow">How It Works</span>
+          <h2>A 3-step routine designed for busy lives.</h2>
+        </div>
+        <div class="how-grid">
+          <article class="step fade-in"><div class="icon">1</div><h3>Cleanse</h3><p>Apply on freshly cleansed, slightly damp skin for better absorption.</p></article>
+          <article class="step fade-in"><div class="icon">2</div><h3>Press In</h3><p>Use 2–3 drops and gently press into face and neck morning and night.</p></article>
+          <article class="step fade-in"><div class="icon">3</div><h3>Seal</h3><p>Follow with moisturizer and SPF in the daytime to lock in results.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="offer">
+      <div class="container offer-grid glass-card offer-card fade-in">
+        <div>
+          <img src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=900&q=80" alt="Lumora Skin serum product hero image" loading="lazy" />
+        </div>
+        <div>
+          <span class="discount-badge">Limited Offer: 30% OFF</span>
+          <h2>Start your glow transformation today.</h2>
+          <div class="price"><strong>$49</strong><s>$70</s></div>
+          <p class="scarcity">Low stock alert: 174 units left from this batch.</p>
+          <a href="#" class="btn btn-primary" aria-label="Buy Lumora Skin now">Claim My 30% Discount</a>
+          <p class="guarantee">Try risk-free with our 30-day money-back guarantee.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq" id="faq">
+      <div class="container fade-in">
+        <span class="eyebrow">FAQ</span>
+        <h2>Everything you need to feel confident before checkout.</h2>
+        <div class="item">
+          <button type="button">Is Lumora Skin safe for sensitive skin? <span>+</span></button>
+          <div class="content"><p>Yes. The formula is dermatologist tested, fragrance-free, and designed to support sensitive skin barriers. Patch test recommended for first use.</p></div>
+        </div>
+        <div class="item">
+          <button type="button">When will I start seeing results? <span>+</span></button>
+          <div class="content"><p>Most users notice improved hydration and glow within 7–14 days. Visible smoothing of fine lines typically appears after 3–4 weeks of consistent use.</p></div>
+        </div>
+        <div class="item">
+          <button type="button">What is your refund policy? <span>+</span></button>
+          <div class="content"><p>If you don’t love your results, contact us within 30 days for a full refund—no stress, no complicated returns process.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta container fade-in" id="final-cta">
+      <h2>Your best skin starts with one drop tonight.</h2>
+      <p>Join thousands who switched to a cleaner, clinical skincare routine that delivers visible results.</p>
+      <a href="#offer" class="btn btn-primary">Get Clear Skin Today</a>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Lumora Skin. Clean science, visible confidence.
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.18 });
+
+    document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
+
+    document.querySelectorAll('.faq .item button').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const item = btn.parentElement;
+        const expanded = item.classList.contains('active');
+        document.querySelectorAll('.faq .item').forEach((el) => el.classList.remove('active'));
+        document.querySelectorAll('.faq .item button span').forEach((s) => (s.textContent = '+'));
+        if (!expanded) {
+          item.classList.add('active');
+          btn.querySelector('span').textContent = '–';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
